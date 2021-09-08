@@ -1,0 +1,51 @@
+.frontpage-hero {
+    height: 40vw;
+    background-position: center;
+    background-size: cover;
+    h1 {
+        position: absolute;
+        bottom: 40px;
+        left: 0px;
+        font-size: 120px;
+        line-height: 120px;
+        font-weight: 600;
+        color: $white;
+        //max-width: 600px;
+    }
+    .date {
+        position: absolute;
+        top: 30px;
+        right: 0px;
+        color: $white;
+        text-decoration: underline;
+        font-size: 72px;
+        line-height: 82px;
+        max-width: 230px;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+    .frontpage-hero {
+        height: 60vh;
+        h1 {
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            right: 15px;
+            font-size: 60px;
+            line-height: 60px;
+            margin-bottom: 15px;
+        }
+        .date {
+            position: absolute;
+            top: 80px;
+            left: 15px;
+            color: $white;
+            text-decoration: underline;
+            font-size: 42px;
+            line-height: 52px;
+            //max-width: 160px;
+        }
+    }
+}

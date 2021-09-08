@@ -1,0 +1,31 @@
+// sidebar styles, obviously. Mobile first preferred
+
+.sidebar {
+	width: 130px;
+	overflow: auto;
+	position: absolute;
+	padding: 2em 2em 0;
+	background-color: rgba(247, 247, 247, 0.8);
+	z-index: 9999;
+	margin-left: -16.5em;
+	transition: top .5s ease-out;
+
+	.mouse {
+		height: 25px;
+		width: 27px;
+		position: absolute;
+		margin: 0 15px;
+		display: inline-block;
+		background-image: url("assets/img/main_icon.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		top: 25.2px;
+		right: 25px;
+		opacity: 1;
+		transition: top .5s ease-out;
+	}
+}
+
+.sidebar-fixed .sidebar {
+	position: fixed;
+}

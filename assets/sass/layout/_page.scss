@@ -1,0 +1,17 @@
+.simple-page {
+  margin: 50px 0px;
+  p, h1, h2, h3, h4, h5, h6 {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+  .container-fluid {
+      margin-bottom: 40px;
+  }
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+}

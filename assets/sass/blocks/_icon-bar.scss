@@ -1,0 +1,16 @@
+.icon-bar {
+    background-color: $pink;
+    padding: 50px 0px;
+    .icon-col {
+        text-align: center;
+        margin-top: 50px;
+        img {
+            object-fit: contain;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+    } 
+}

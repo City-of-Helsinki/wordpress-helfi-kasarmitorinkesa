@@ -1,0 +1,48 @@
+{
+    "key": "group_6063afa9881ea",
+    "title": "Blog post",
+    "fields": [
+        {
+            "key": "field_6063afaf5d88a",
+            "label": "Otsikkotyyli",
+            "name": "otsikkotyyli",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "otsikko-1": "Otsikkotyyli 1",
+                "otsikko-2": "Otsikkotyyli 2"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "otsikko-1",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1617265846
+}

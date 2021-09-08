@@ -1,0 +1,67 @@
+// More complex media queries in grid-variables.scss
+
+@mixin x-small {
+	@media (max-width: $reflex-xs) {
+		@content;
+	}
+}
+
+@mixin small {
+	@media (max-width: $reflex-sm) {
+		@content;
+	}
+}
+
+@mixin medium {
+	@media (max-width: $reflex-md) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media (max-width: $reflex-lg) {
+		@content;
+	}
+}
+
+@mixin x-large {
+	@media (max-width: $reflex-xlg) {
+		@content;
+	}
+}
+
+@mixin min-x-small {
+	@media (min-width: $reflex-xs) {
+		@content;
+	}
+}
+
+@mixin min-small {
+	@media (min-width: $reflex-sm) {
+		@content;
+	}
+}
+
+@mixin min-medium {
+	@media (min-width: $reflex-md) {
+		@content;
+	}
+}
+
+@mixin min-large {
+	@media (min-width: $reflex-lg) {
+		@content;
+	}
+}
+
+@mixin min-x-large {
+	@media (min-width: $reflex-xlg) {
+		@content;
+	}
+}
+
+@mixin min-body {
+	@media (min-width: $body-width ) {
+		@content;
+	}
+}

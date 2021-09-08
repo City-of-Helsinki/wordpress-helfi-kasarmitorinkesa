@@ -1,0 +1,25 @@
+.frontpage-news, .news {
+    padding: 50px 0px;
+    hr {
+        border-width: 2px;
+    }
+    .h2 {
+        padding-bottom: 40px;
+        font-weight: 800;
+    }
+    .first_two {
+        .post {
+            img {
+                height: 300px;
+            }
+        }
+    }
+    .post {
+        padding-bottom: 15px;
+        .h3 {
+            color: #000;
+            text-decoration: underline;
+            padding-bottom: 20px;
+        }
+    }
+}

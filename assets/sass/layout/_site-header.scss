@@ -1,0 +1,19 @@
+// Site header styles, mobile first preferred
+
+.site-header {
+
+  &__logo {
+    display: block;
+    text-decoration: none;
+    width: 215px;
+    height: 72px;
+    background: url($theme+'/assets/img/logo.png') no-repeat center;
+    background-size: contain;
+    
+    @include min-large {
+      width: 255px;
+      height: 75px;
+      margin: 0 auto;
+    }
+
+  }

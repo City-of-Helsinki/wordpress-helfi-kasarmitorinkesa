@@ -1,0 +1,19 @@
+// Theme variables, like colors, fonts
+$theme: '/wp-content/themes/kasarmitori'; // use if need path for asset images for example, like  background: url($theme+'/assets/img/logo.png');
+
+// fonts
+$sansFont: 'Titillium Web', sans-serif;
+$serifFont: Georgia, Serif;
+$extraFont: arial, helvetica, sans-serif;
+
+// Colors
+$blue: #A0C9EB;
+$pink: #F5A3C7;
+$white: #ffffff;
+$green: #079246;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

@@ -1,0 +1,18 @@
+// Colors
+
+.color-bg {
+	background: #f5f0eb;
+	position: relative;
+	padding: 50px 0;
+}
+
+// Buttons
+a.button {
+	padding: 10px 30px;
+	text-decoration: none;
+	display: inline-block;
+	font-family: $serifFont;
+	border: 1px solid $blue;
+	color: $white;
+	background: $blue;
+}

@@ -1,0 +1,468 @@
+/*!
+Theme Name: Aste Helsinki
+Theme URI: http://underscores.me/
+Author: Aste Helsinki
+Author URI: https://astehelsinki.fi/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: astehelsinki
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Aste Helsinki is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+---------------------------------------------------------------- */
+/*
+Typography approach from Chris Coyer: https://css-tricks.com/rems-ems/
+- All layout elements with rem units
+- Elements (like headings) inside layout elements with em units
+- And then pixel to rem/em conversion with sass functions below
+*/
+/* icons */
+@font-face {
+  font-family: "fontello";
+  src: url("assets/icons/font/fontello.eot");
+  src: url("assets/icons/font/fontello.eot#iefix") format("embedded-opentype"), url("assets/icons/font/fontello.woff2") format("woff2"), url("assets/icons/font/fontello.woff") format("woff"), url("assets/icons/font/fontello.ttf") format("truetype"), url("assets/icons/font/fontello.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "HelsinkiGrotesk";
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  font-weight: 600;
+  margin-bottom: -0.35em;
+}
+
+h1,
+h1.page-title,
+.h1 {
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+h1 strong,
+h1.page-title strong,
+.h1 strong {
+  font-weight: 700;
+}
+
+hr {
+  border-top: thin solid black;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+a {
+  color: #A0C9EB;
+}
+
+.single-container {
+  padding-top: 35px;
+}
+
+body {
+  margin: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.mobile-open {
+  overflow: visible;
+  height: 100%;
+}
+
+html.mobile-open {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  width: auto;
+  box-sizing: border-box;
+  position: relative;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+img::before {
+  display: block;
+  content: "";
+  padding-top: calc(100% * 2 / 3);
+}
+
+.site {
+  background: #fff;
+}
+
+.post-edit-link {
+  display: flex !important;
+  justify-content: center;
+  width: 100px;
+  margin: 10px auto;
+  position: relative;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3em 0;
+  position: relative;
+}
+.line hr {
+  border: 0;
+  border-top: 1px solid #bc9d49;
+  flex: 1;
+  z-index: 1;
+}
+.line i:after {
+  height: 25px;
+  width: 27px;
+  margin: 0 15px;
+  content: "";
+  display: inline-block;
+  background-image: url("assets/img/main_icon.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.arrow-down {
+  box-sizing: border-box;
+  height: 4vw;
+  width: 4vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+}
+.arrow-down:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+
+.wp-block-audio figcaption {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  color: #555d66;
+  text-align: center;
+  font-size: 13px;
+}
+
+.wp-block-audio audio {
+  width: 100%;
+  min-width: 300px;
+}
+
+.sidebar {
+  width: 130px;
+  overflow: auto;
+  position: absolute;
+  padding: 2em 2em 0;
+  background-color: rgba(247, 247, 247, 0.8);
+  z-index: 9999;
+  margin-left: -16.5em;
+  transition: top 0.5s ease-out;
+}
+.sidebar .mouse {
+  height: 25px;
+  width: 27px;
+  position: absolute;
+  margin: 0 15px;
+  display: inline-block;
+  background-image: url("assets/img/main_icon.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 25.2px;
+  right: 25px;
+  opacity: 1;
+  transition: top 0.5s ease-out;
+}
+
+.sidebar-fixed .sidebar {
+  position: fixed;
+}
+
+.color-bg {
+  background: #f5f0eb;
+  position: relative;
+  padding: 50px 0;
+}
+
+a.button {
+  padding: 10px 30px;
+  text-decoration: none;
+  display: inline-block;
+  font-family: Georgia, Serif;
+  border: 1px solid #A0C9EB;
+  color: #ffffff;
+  background: #A0C9EB;
+}
+
+.site-main {
+  font-size: 16px;
+}
+
+header {
+  background-color: #079246;
+  padding: 10px 0px;
+}
+header .navbar-brand img {
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header .collapse.navbar-collapse div:first-child {
+  margin-left: auto;
+  margin-right: auto;
+}
+header ul {
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+header ul li {
+  display: inline-block;
+  list-style: none;
+  line-height: 35px;
+  padding: 0px 10px;
+}
+header ul li a {
+  color: #ffffff;
+  font-weight: 600;
+}
+header .languages li.current-lang {
+  text-decoration: underline;
+}
+header .languages li a {
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: #079246;
+  padding: 40px 0px;
+  color: #fff;
+}
+footer hr {
+  border-top: 2px solid #ffffff;
+  margin-bottom: 40px;
+}
+footer .footer_logo {
+  height: 80px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer h3 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+footer h4 {
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.btn {
+  border-radius: 0px;
+  border-width: 2px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.single-blog-post {
+  padding: 50px 0px;
+}
+.single-blog-post .title .date {
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.single-blog-post .title h1 {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.single-blog-post .title h1.otsikko-2 {
+  text-align: center;
+  font-size: 5rem;
+  line-height: 6rem;
+}
+.single-blog-post .content p, .single-blog-post .content h5 {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+.single-blog-post .content img {
+  margin-bottom: 40px;
+}
+
+.frontpage-hero {
+  height: 40vw;
+  background-position: center;
+  background-size: cover;
+}
+.frontpage-hero h1 {
+  position: absolute;
+  bottom: 40px;
+  left: 0px;
+  font-size: 6rem;
+  line-height: 7rem;
+  font-weight: 800;
+  color: #ffffff;
+  max-width: 600px;
+}
+.frontpage-hero .date {
+  position: absolute;
+  top: 80px;
+  right: 0px;
+  color: #ffffff;
+  text-decoration: underline;
+  font-size: 3rem;
+  line-height: 4rem;
+  max-width: 160px;
+}
+
+@media screen and (max-width: 992px) {
+  .frontpage-hero {
+    height: 60vh;
+  }
+  .frontpage-hero h1 {
+    position: absolute;
+    bottom: 10vh;
+    left: 15px;
+    right: 15px;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .frontpage-hero .date {
+    position: absolute;
+    top: 80px;
+    left: 15px;
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 3rem;
+    line-height: 4rem;
+    max-width: 160px;
+  }
+}
+.openingtimes-address-text .column_1 h2, .openingtimes-address-text .column_1 h3, .openingtimes-address-text .column_2 h2, .openingtimes-address-text .column_2 h3 {
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+.openingtimes-address-text .column_1 p, .openingtimes-address-text .column_2 p {
+  margin-bottom: 20px;
+}
+.openingtimes-address-text .column_2 {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.openingtimes-address-text .column_1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  height: 400px;
+}
+.openingtimes-address-text .column_1 .content {
+  z-index: 1;
+  position: absolute;
+}
+.openingtimes-address-text .column_1::before {
+  content: "";
+  background: #A0C9EB;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: -200%;
+  right: 0px;
+  z-index: 0;
+}
+
+.image-and-text {
+  margin: 50px 0px;
+}
+.image-and-text.image-left-and-text .content {
+  left: -120px;
+}
+.image-and-text.image-right-and-text .content {
+  right: -120px;
+}
+.image-and-text .content {
+  padding: 85px 20px;
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  top: 15%;
+  z-index: 1;
+}
+.image-and-text .content h3 {
+  margin-bottom: 20px;
+  font-weight: 800;
+  max-width: 80%;
+}
+.image-and-text .content p {
+  max-width: 80%;
+}
+
+.frontpage-news {
+  background: #A0C9EB;
+  padding: 50px 0px;
+}
+.frontpage-news .h2 {
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+.frontpage-news .post {
+  margin-bottom: 20px;
+}
+.frontpage-news .post .h3 {
+  color: #000;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.icon-bar {
+  background-color: #F5A3C7;
+  padding: 50px 0px;
+}
+.icon-bar .icon-col {
+  text-align: center;
+  margin-top: 50px;
+}
+.icon-bar .icon-col img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: auto;
+  max-height: 100px;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=main.min.css.map*/

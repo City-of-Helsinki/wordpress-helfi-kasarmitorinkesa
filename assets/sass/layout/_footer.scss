@@ -1,0 +1,27 @@
+footer {
+  background-color: $green;
+  padding: 40px 0px;
+  color: #fff;
+  hr {
+    border-top: 2px solid $white;
+    margin-bottom: 40px;
+  }
+  .footer_logo {
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  h4 {
+    text-decoration: underline;
+    margin-bottom: 20px;
+  }
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "WPHEL/kasarmitorinkesa",
+    "type": "wordpress-theme",
+	"version": "master",
+    "authors": [
+        {
+            "name": "Aste Helsinki",
+            "email": "aste@astehelsinki.fi"
+        }
+    ],
+	"require": {
+        "wecodemore/wpstarter": "~2.0",
+        "johnpbloch/wordpress-core": ">5.0"
+    }
+}

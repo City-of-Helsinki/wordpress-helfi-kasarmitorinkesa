@@ -1,0 +1,87 @@
+/*
+Typography approach from Chris Coyer: https://css-tricks.com/rems-ems/
+- All layout elements with rem units
+- Elements (like headings) inside layout elements with em units
+- And then pixel to rem/em conversion with sass functions below
+*/
+
+/* icons */
+@font-face {
+  font-family: "fontello";
+  src: url("assets/icons/font/fontello.eot");
+  src: url("assets/icons/font/fontello.eot#iefix") format("embedded-opentype"),
+    url("assets/icons/font/fontello.woff2") format("woff2"),
+    url("assets/icons/font/fontello.woff") format("woff"),
+    url("assets/icons/font/fontello.ttf") format("truetype"),
+    url("assets/icons/font/fontello.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// count rem and em sizes, https://css-tricks.com/snippets/sass/px-to-em-functions/
+$browser-context: 16; // Default html px size
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+// Fonts
+* {
+  font-family: 'HelsinkiGrotesk';
+}
+
+// headings general styles
+h1,
+.h1,
+h2,
+.h2 {
+  font-weight: 600;
+}
+h3,
+.h3,
+h4,
+.h4 {
+  font-weight: 500;
+}
+
+h1,
+h1.page-title,
+.h1 {
+  letter-spacing: 1px;
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 40px;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 32px;
+}
+
+hr {
+  border-top: thin solid black;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.content a {
+  color: black;
+  text-decoration: underline;
+}
+
+.text-dark {
+  color: #000!important;
+}
